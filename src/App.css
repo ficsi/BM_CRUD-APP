@@ -1,0 +1,218 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #09d3ac;
+}
+
+li {
+    list-style-type: none;
+    background: #eee;
+    margin-bottom: 1px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+ul {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+li[style="visibility:hidden"] {
+    color: red;
+}
+
+/*  */
+.SortableList {
+    position: relative;
+    z-index: 0;
+    background-color: #f3f3f3;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    outline: none;
+
+    width: 400px;
+    height: 600px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #e0e0e0;
+    list-style: none;
+    padding: 0;
+}
+
+.SortableItem {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: left;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #efefef;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #333;
+    font-weight: 500;
+}
+
+#page_blocks td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.drag-handle {
+    content: '....';
+    width: 30px;
+    height: 30px;
+    display: block;
+    overflow: hidden;
+    line-height: 5px;
+    padding: 3px 4px;
+    cursor: move;
+    vertical-align: middle;
+    margin-top: -.7em;
+    margin-right: .3em;
+    font-size: 12px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: #cccccc;
+    text-shadow: 1px 0 1px black;
+    float: left;
+}
+
+.drag-handle::after {
+    content: '... ... ... ...';
+}
+
+
+.deactivate {
+    z-index: 999;
+}
+
+.SortableHelper {
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.2),
+    0 -5px 5px -5px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: row-resize;
+}
+
+.disable {
+    /*text-align: right;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+}
+
+.table td,
+.table th {
+    border: none;
+}
+
+.list-options {
+    vertical-align: middle !important;
+    text-align: center;
+}
+
+.list-options > input {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+label {
+    float: left;
+}
+
+/*
+Auto ...
+*/
+.react-autosuggest__container {
+    position: relative;
+}
+
+.react-autosuggest__input {
+    width: 240px;
+    height: 30px;
+    padding: 10px 20px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.react-autosuggest__input--focused {
+    outline: none;
+}
+
+.react-autosuggest__input--open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+    display: none;
+}
+
+.react-autosuggest__suggestions-container--open {
+    display: block;
+    position: absolute;
+    top: 51px;
+    width: 280px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    z-index: 2;
+}
+
+.react-autosuggest__suggestions-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.react-autosuggest__suggestion--highlighted {
+    background-color: #ddd;
+}
+/**/
+.btn-danger:after{
+    content: 'Disable';
+}
+.btn-success:after{
+    content: 'Enable';
+}
